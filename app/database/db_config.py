@@ -3,9 +3,8 @@
 import sqlite3 # Biblioteca para manipulação do banco de dados SQLite.
 
 def create_database():
-    # Conecta ao banco de dados 'clinica.db'. Se o arquivo não existir, será criado.
+    # Conecta ao banco de dados
     conn = sqlite3.connect("app/database/clinica.db")
-     # Cria um objeto cursor, que permite interagir com o banco de dados.
     cursor = conn.cursor()
     
     # Cria a tabela 'pacientes' no banco de dados se ela não existir.
