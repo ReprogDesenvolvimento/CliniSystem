@@ -110,7 +110,7 @@ class App(ctk.CTk, BackEnd):
 
     def tela_de_login(self):
         # Carregar imagem com Pillow
-        self.img = PhotoImage(file="imagem1.png")
+        self.img = PhotoImage(file="Login/imagem1.png")
         self.lb_img = ctk.CTkLabel(self, text=None, image=self.img)
         self.lb_img.grid(row=3, column=0, padx=4)  
         
