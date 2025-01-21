@@ -13,4 +13,4 @@ def main():
     MainWindow()  # Inicia a interface gráfica do sistema.
 
 if __name__ == "__main__":
-    main()  # Executa a função principal se este arquivo for o ponto de entrada.
+    main()  # Executa a função principal.
