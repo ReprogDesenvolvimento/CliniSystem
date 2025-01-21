@@ -1,10 +1,10 @@
+#Este código preenche um banco de dados SQLite com informações iniciais sobre pacientes, médicos, consultas e notas fiscais.
+
 import sqlite3  # Importa a biblioteca sqlite3
 
 def seed_database():
     # Conecta ao banco de dados 'clinica.db' localizado no diretório especificado.
     conn = sqlite3.connect("app/database/clinica.db")
-    
-    # Cria um objeto cursor para executar comandos SQL no banco de dados.
     cursor = conn.cursor()
 
     # Lista de pacientes para inserir na tabela 'pacientes'.
@@ -25,7 +25,6 @@ def seed_database():
         ("Dr. Jonas Caetano", "Psiquiatra", "67833-CE", "88 3445-2120")
     ]
     
-    # Insere os dados de médicos na tabela 'medicos'. A cláusula 'OR IGNORE' impede erros caso o CRM já exista.
     cursor.executemany("INSERT OR IGNORE INTO medicos (nome, especialidade, crm, telefone) VALUES (?, ?, ?, ?)", medicos)
 
     # Lista de consultas para inserir na tabela 'consultas'.
@@ -34,7 +33,6 @@ def seed_database():
         (2, 2, "16/12/2024", "10:00")   # Consulta de Graziella Mendes com Dr. João Silva
     ]
     
-    # Insere os dados de consultas na tabela 'consultas'. A cláusula 'OR IGNORE' impede erros caso a consulta já exista.
     cursor.executemany("INSERT OR IGNORE INTO consultas (id_paciente, id_medico, data, horario) VALUES (?, ?, ?, ?)", consultas)
 
     # Lista de notas fiscais para inserir na tabela 'notas_fiscais'.
@@ -43,7 +41,6 @@ def seed_database():
         (2, 300.00, "17/12/2024")   # Nota fiscal de Graziella Mendes no valor de 300.00
     ]
     
-    # Insere as notas fiscais na tabela 'notas_fiscais'. A cláusula 'OR IGNORE' impede erros caso a nota já exista.
     cursor.executemany("INSERT OR IGNORE INTO notas_fiscais (id_paciente, valor, data_emissao) VALUES (?, ?, ?)", notas)
 
     # Confirma todas as alterações feitas no banco de dados.
