@@ -8,22 +8,25 @@ def sair():
 # Criar a janela principal
 raiz = tk.Tk()
 raiz.title("Sistema de Gestão Hospitalar | CliniSystem")
-raiz.geometry("1024x768")
-raiz.resizable(True, True)
+raiz.geometry("1200x700")
+raiz.state("zoomed")
 
-# Título superior
-cabecalho = tk.Label(raiz, text="Sistema de Gestão Hospitalar | CliniSystem", bg="navy", fg="white", font=("Arial", 14, "bold"))
+# Cabeçalho superior
+cabecalho = tk.Frame(raiz, bg="navy", height=50)
 cabecalho.pack(fill=tk.X)
+titulo = tk.Label(cabecalho, text="Sistema de Gestão Hospitalar | CliniSystem", bg="navy", fg="white", font=("Arial", 16, "bold"))
+titulo.pack(side=tk.LEFT, padx=20, pady=10)
+logout_btn = tk.Button(cabecalho, text="Sair", bg="orange", fg="white", font=("Arial", 10, "bold"), command=sair)
+logout_btn.pack(side=tk.RIGHT, padx=20, pady=10)
 
 # Menu lateral
-menu_lateral = tk.Frame(raiz, bg="lightgray", width=200)
-menu_lateral.pack(side=tk.LEFT, fill=tk.Y)
-
-botoes_menu = ["Início", "Médico", "Paciente", "Consulta", "Sair"]
-for texto in botoes_menu:
-    comando = sair if texto == "Sair" else None
-    botao = tk.Button(menu_lateral, text=texto, font=("Arial", 12), bg="white", relief=tk.RIDGE, command=comando)
-    botao.pack(fill=tk.X, pady=5, padx=10)
+menu_frame = tk.Frame(raiz, bg="lightgray", width=180)
+menu_frame.pack(side=tk.LEFT, fill=tk.Y)
+menu_botoes = ["Início", "Médico", "Paciente", "Consulta", "Sair"]
+for texto_botao in menu_botoes:
+    comando = sair if texto_botao == "Sair" else None
+    btn = tk.Button(menu_frame, text=texto_botao, font=("Arial", 12), bg="white", relief=tk.GROOVE, height=2)
+    btn.pack(fill=tk.X, pady=5, padx=10)
 
 # Área principal para Gerenciar Médicos e Especializações
 tela_principal = tk.Frame(raiz, bg="white")
