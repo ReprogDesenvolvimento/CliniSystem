@@ -1,0 +1,34 @@
+[
+    {
+        "nome": "Paulo Lacerda",
+        "genero": "masculino",
+        "nascimento": "12-09-1988",
+        "contato": "8877766566",
+        "email": "Placerda@gmail.com",
+        "endereco": "Rua das Flores, 988"
+    },
+    {
+        "nome": "Jose Silva",
+        "genero": "Masculino",
+        "nascimento": "12-09-2009",
+        "contato": "8899988755",
+        "email": "Jsilva@gmail.com",
+        "endereco": "Rua Alves, 12"
+    },
+    {
+        "nome": "p",
+        "genero": "p",
+        "nascimento": "p",
+        "contato": "p",
+        "email": "p",
+        "endereco": "p"
+    },
+    {
+        "nome": "a",
+        "genero": "a",
+        "nascimento": "a",
+        "contato": "a",
+        "email": "a",
+        "endereco": "a"
+    }
+]
