@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe Id="NFe12345678901234567890123456789012345678901234" versao="4.00">
+      <emit>
+        <CNPJ>12345678000195</CNPJ>
+        <xNome>Clínca Amaro</xNome>
+        <xFant>Clínica Amaro</xFant>
+        <enderEmit>
+          <xLgr>Rua Francisco Marcelino Santana, 123</xLgr>
+          <xMun>Crato</xMun>
+          <UF>CE</UF>
+        </enderEmit>
+      </emit>
+      <dest>
+        <CPF>11111111111</CPF>
+        <xNome>Graziella Mendes</xNome>
+      </dest>
+      <det nItem="1">
+        <prod>
+          <cProd>001</cProd>
+          <xProd>Consulta</xProd>
+          <vProd>813</vProd>
+        </prod>
+      </det>
+    </infNFe>
+  </NFe>
+</nfeProc>
